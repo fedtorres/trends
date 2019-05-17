@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    div.container-fluid.flex-grow-1
+        each r in trends
+            div.row.flex-grow-1
+                each c in r
+                    div.col.flex-grow-1.card #{c.keyword}
+

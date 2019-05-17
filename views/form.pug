@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+                h1.display-4.m-b-2 Trends
+
+                form(method='POST' action='/submit')
+                    div.form-group
+                        label(for='country') País:
+                        input#country.form-control(type='text', name='country', required='')
+                    div.form-group
+                        label(for='category') Categoría:
+                        input#category.form-control(type='text', name='category')
+                    div.form-group
+                        label(for='columns') Columnas:
+                        input#columns.form-control(type='number', name='columns', min=3, max=5, value=3)
+                    div.form-group
+                        label(for='rows') Filas:
+                        input#rows.form-control(type='number' name='rows', min=3, max=5, value=3)
+                    button.btn.btn-primary(type='submit') Consultar
